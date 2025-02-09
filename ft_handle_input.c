@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:04:24 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 11:09:25 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/09 16:56:20 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	ft_check_sign(char **sl_argv)
 	return (0);
 }
 
-static void	ft_double_sort(int **num_argv, int c_word)
+static void	ft_double_sort(int **num_argv, char **str_argv, int c_word)
 {
 	t_scan	t_var;
 
@@ -55,7 +55,7 @@ static void	ft_double_sort(int **num_argv, int c_word)
 		while (t_var.s_loop--)
 		{
 			if (*num_argv[t_var.n_i] == *num_argv[t_var.s_n_i])
-				ft_error(0, num_argv, NULL);
+				ft_error(0, num_argv, str_argv);
 			t_var.s_n_i++;
 		}
 		if (*num_argv[t_var.n_i] < *num_argv[t_var.n_i + 1])
@@ -63,7 +63,7 @@ static void	ft_double_sort(int **num_argv, int c_word)
 		t_var.n_i++;
 	}
 	if (t_var.flag == c_word)
-		ft_error(1, num_argv, NULL);
+		ft_error(1, num_argv, str_argv);
 }
 
 static int	**ft_cvnumber(char **str_argv)
@@ -91,7 +91,7 @@ static int	**ft_cvnumber(char **str_argv)
 		*t_var.num_argv[t_var.i] = ft_atoi(str_argv[t_var.i]);
 	}
 	t_var.num_argv[t_var.i] = NULL;
-	ft_double_sort(t_var.num_argv, t_var.c_word);
+	ft_double_sort(t_var.num_argv, str_argv, t_var.c_word);
 	return (t_var.num_argv);
 }
 
