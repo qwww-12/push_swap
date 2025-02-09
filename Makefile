@@ -1,6 +1,6 @@
 CC = cc
 
-# CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRC =	push_swap.c				h1_tools.c				h2_tools.c				ft_handle_input.c		\
 		ft_list_edit.c			ft_memleaks.c			ft_push_b.c				ft_targets.c 			\
@@ -21,7 +21,7 @@ LIB = ./libft/libft.a
 all: push_swap
 
 push_swap: $(OBJ) $(LIB)
-	$(CC) $(OBJ) $(LIB) -o $@
+	$(CC) $(CFLAGS) $(OBJ) $(LIB) -o $@
 
 $(LIB): $(SRC_LIBFT) $(HDR_LIBFT)
 	$(MAKE) -C ./libft

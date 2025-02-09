@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 12:17:59 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/07 11:17:27 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/09 17:02:23 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	ft_condition(t_list **stack_a, t_list **stack_b, t_list *f)
 	ft_index(*stack_a, *stack_b);
 }
 
-static void	pr_sort(t_list **stack_a, t_list **stack_b, t_list *f, int sz_list)
+static void	pr_sort(t_list **stack_a, t_list **stack_b, t_list *f)
 {
 	t_list	*stack_pb;
 
@@ -92,5 +92,5 @@ void	ft_sort_fn(t_list **stack_a, t_list **stack_b)
 	cost_min = ft_cost_min(*stack_b);
 	while (stack_pb && stack_pb->lt_cost != cost_min)
 		stack_pb = stack_pb->next;
-	pr_sort(stack_a, stack_b, stack_pb, ft_lstsize(*stack_b));
+	pr_sort(stack_a, stack_b, stack_pb);
 }
