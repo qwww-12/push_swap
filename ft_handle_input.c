@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:04:24 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 16:56:20 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:34:26 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ static int	**ft_cvnumber(char **str_argv)
 			ft_free_char_dbp(&str_argv);
 			return (ft_free_int_dbp(&t_var.num_argv), NULL);
 		}
-		*t_var.num_argv[t_var.i] = ft_atoi(str_argv[t_var.i]);
+		*t_var.num_argv[t_var.i] = t_var.v_atoi;
 	}
 	t_var.num_argv[t_var.i] = NULL;
 	ft_double_sort(t_var.num_argv, str_argv, t_var.c_word);
@@ -116,18 +116,27 @@ static char	*ft_join_argv(int argc, char **argv)
 
 int	**ft_input_argv(int argc, char **argv)
 {
-	char	*totl_argv;
-	char	**spl_argv;
-	int		**num_argv;
+	t_inpt	t_var;
 
-	spl_argv = NULL;
-	num_argv = NULL;
-	totl_argv = ft_join_argv(argc, argv);
-	spl_argv = ft_split(totl_argv, ' ');
-	ft_free(&totl_argv);
-	if (ft_check_sign(spl_argv))
-		ft_error(0, NULL, spl_argv);
-	num_argv = ft_cvnumber(spl_argv);
-	ft_free_char_dbp(&spl_argv);
-	return (num_argv);
+	t_var.spl_argv = NULL;
+	t_var.num_argv = NULL;
+	t_var.i = -1;
+	while (argv[++t_var.i])
+	{
+		t_var.v = 0;
+		if (argv[t_var.i][0] == '\0')
+			ft_error(0, NULL, NULL);
+		while (argv[t_var.i][t_var.v] == ' ')
+			t_var.v++;
+		if ((int)ft_strlen(argv[t_var.i]) == t_var.v)
+			ft_error(0, NULL, NULL);
+	}
+	t_var.totl_argv = ft_join_argv(argc, argv);
+	t_var.spl_argv = ft_split(t_var.totl_argv, ' ');
+	ft_free(&t_var.totl_argv);
+	if (ft_check_sign(t_var.spl_argv))
+		ft_error(0, NULL, t_var.spl_argv);
+	t_var.num_argv = ft_cvnumber(t_var.spl_argv);
+	ft_free_char_dbp(&t_var.spl_argv);
+	return (t_var.num_argv);
 }

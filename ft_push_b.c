@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 13:12:21 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 14:52:56 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/09 17:48:13 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int	ft_count_of_mrng(t_list *stack_a, int rng)
 	count = 0;
 	while (stack_a)
 	{
-		if (stack_a->data <= rng)
+		if (stack_a->data < rng)
 			count++;
 		stack_a = stack_a->next;
 	}

@@ -6,12 +6,22 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 09:46:57 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 10:48:27 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 11:32:28 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VARIABLES_H
 # define VARIABLES_H
+
+typedef struct s_inpt
+{
+	char	*totl_argv;
+	char	**spl_argv;
+	int		**num_argv;
+	int		i;
+	int		v;
+	int		sp_flag;
+}	t_inpt;
 
 typedef struct s_sign
 {
