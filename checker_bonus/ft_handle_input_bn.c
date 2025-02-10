@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_handle_input.c                                  :+:      :+:    :+:   */
+/*   ft_handle_input_bn.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:04:24 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 16:53:59 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 17:02:06 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bn.h"
+#include <stdio.h>
 
 static int	ft_check_sign(char **sl_argv)
 {

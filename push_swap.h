@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:44:10 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 11:05:11 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 12:43:05 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include "./libft/libft.h"
 # include "variables.h"
 # include <stdbool.h>
-# include <stdio.h>
 
 // ========= h1_tools.c =========
 
