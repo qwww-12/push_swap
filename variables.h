@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 09:46:57 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 11:32:28 by mbarhoun         ###   ########.fr       */
+/*   Created: 2025/02/11 09:58:28 by mbarhoun          #+#    #+#             */
+/*   Updated: 2025/02/11 09:58:29 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef VARIABLES_H
 # define VARIABLES_H

@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 15:59:47 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/08 13:21:27 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:55:31 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,14 @@ void	ft_index(t_list *stack_a, t_list *stack_b)
 		stack_b->index = index++;
 		stack_b = stack_b->next;
 	}
+}
+
+int	ft_wrdlen(char **str)
+{
+	int	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }

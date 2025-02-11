@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:46:16 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 12:47:09 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:20:37 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 		num_argv = ft_input_argv(argc, argv);
 	stack_a = ft_linked_list(num_argv);
 	if (!stack_a)
-		return (ft_free_int_dbp(&num_argv), 1);
+		return (ft_free_int_dbp(&num_argv), 0);
 	ft_free_int_dbp(&num_argv);
 	if (ft_lstsize(stack_a) == 3 || ft_lstsize(stack_a) == 2)
 		ft_call_sort(&stack_a, ft_lstsize(stack_a));

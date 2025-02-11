@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 14:02:21 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 17:56:50 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:03:48 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,31 @@ static int	ft_strcmp(const char *s1, const char *s2)
 
 static void	ft_app_sort(t_list **stack_a, t_list **stack_b, char *buffer)
 {
-	if (!ft_strcmp(buffer ,"pa\n"))
+	if (!ft_strcmp(buffer, "pa\n"))
 		pa(stack_a, stack_b);
-	else if (!ft_strcmp(buffer ,"pb\n"))
+	else if (!ft_strcmp(buffer, "pb\n"))
 		pb(stack_a, stack_b);
-	else if (!ft_strcmp(buffer ,"ra\n"))
+	else if (!ft_strcmp(buffer, "ra\n"))
 		ra(stack_a);
-	else if (!ft_strcmp(buffer ,"rb\n"))
+	else if (!ft_strcmp(buffer, "rb\n"))
 		rb(stack_b);
-	else if (!ft_strcmp(buffer ,"rr\n"))
+	else if (!ft_strcmp(buffer, "rr\n"))
 		rr(stack_a, stack_b);
-	else if (!ft_strcmp(buffer ,"rra\n"))
+	else if (!ft_strcmp(buffer, "rra\n"))
 		rra(stack_a);
-	else if (!ft_strcmp(buffer ,"rrb\n"))
+	else if (!ft_strcmp(buffer, "rrb\n"))
 		rrb(stack_b);
-	else if (!ft_strcmp(buffer ,"rrr\n"))
+	else if (!ft_strcmp(buffer, "rrr\n"))
 		rrr(stack_a, stack_b);
-	else
+	else if (!ft_strcmp(buffer, "sa\n"))
 		sa(stack_a);
+	else
+	{
+		ft_lstclear(stack_a);
+		ft_lstclear(stack_b);
+		ft_free(&buffer);
+		ft_error(0, NULL, NULL);
+	}
 }
 
 void	ft_read_move(t_list **stack_a)
@@ -82,6 +89,7 @@ void	ft_read_move(t_list **stack_a)
 		if (!buffer)
 			break ;
 		ft_app_sort(stack_a, &stack_b, buffer);
+		ft_free(&buffer);
 	}
 	ft_check_sort(stack_a, &stack_b, *stack_a);
 }

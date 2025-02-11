@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/10 12:42:22 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 16:31:01 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:54:43 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ t_list	*ft_linked_list(int **num_argv);
 
 void	ft_error(bool err, int **num_argv, char **str_argv);
 int		ft_sign(int c);
+int		ft_wrdlen(char **str);
 
 // ========== Opeartions ==========
 

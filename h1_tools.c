@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:58:22 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 11:23:01 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:18:53 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_call_sort(t_list **stack_a, int size)
 void	ft_error(bool err, int **num_argv, char **str_argv)
 {
 	if (!err)
-		ft_putstr_fd("Error!\n", 2);
+		ft_putstr_fd("Error\n", 2);
 	ft_free_int_dbp(&num_argv);
 	ft_free_char_dbp(&str_argv);
 	exit (!err);

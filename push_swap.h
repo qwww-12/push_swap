@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 14:44:10 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 12:43:05 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:48:35 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		ft_sign(int c);
 
 void	ft_index(t_list *stack_a, t_list *stack_b);
 void	ft_cost(t_list *stack_a, t_list *stack_b);
+int		ft_wrdlen(char **str);
 
 // ========== ft_handle_input.c ==========
 

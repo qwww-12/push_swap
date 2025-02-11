@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 13:12:21 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/09 17:48:13 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:07:32 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,12 +71,10 @@ static int	ft_calcul_rng(t_list *stack)
 
 t_list	*ft_range(t_list **stack_a)
 {
-	t_list	*stack_tmpa;
 	t_list	*stack_b;
 	int		rng;
 	int		cof_min;
 
-	stack_tmpa = *stack_a;
 	stack_b = NULL;
 	rng = ft_calcul_rng(*stack_a);
 	cof_min = ft_count_of_mrng(*stack_a, rng);

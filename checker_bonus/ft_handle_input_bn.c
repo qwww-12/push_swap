@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:04:24 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/10 17:02:06 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 09:52:15 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ static int	**ft_cvnumber(char **str_argv)
 	while (str_argv[++t_var.i])
 	{
 		t_var.v_atoi = ft_atoi(str_argv[t_var.i]);
+		t_var.num_argv[t_var.i] = NULL;
 		if (t_var.v_atoi > 2147483647 || t_var.v_atoi < -2147483648)
 			ft_error(0, t_var.num_argv, str_argv);
 		t_var.num_argv[t_var.i] = (int *)malloc(sizeof(int));
