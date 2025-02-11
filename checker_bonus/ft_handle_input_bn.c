@@ -6,7 +6,7 @@
 /*   By: mbarhoun <mbarhoun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:04:24 by mbarhoun          #+#    #+#             */
-/*   Updated: 2025/02/11 09:52:15 by mbarhoun         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:20:49 by mbarhoun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,7 @@ static int	**ft_cvnumber(char **str_argv)
 	t_cvnb	t_var;
 
 	t_var.i = -1;
-	t_var.c_word = 0;
-	while (str_argv[t_var.c_word])
-		t_var.c_word++;
+	t_var.c_word = ft_wrdlen(str_argv);
 	t_var.num_argv = (int **)malloc(sizeof(int *) * (t_var.c_word + 1));
 	if (!t_var.num_argv)
 		return (ft_free_char_dbp(&str_argv), NULL);
