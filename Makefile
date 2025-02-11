@@ -31,7 +31,9 @@ LIB = ./libft/libft.a
 
 all: push_swap
 
-bonus: $(B_OBJ) $(LIB)
+bonus: checker
+
+checker: $(B_OBJ) $(LIB)
 	$(CC) $(CFLAGS) $(B_OBJ) $(LIB) -o checker
 
 push_swap: $(OBJ) $(LIB)
